@@ -1,0 +1,10 @@
+{
+  "window.zoomLevel": 1,
+  "editor.tabSize": 2,
+
+  // Prettier
+  "prettier.eslintIntegration": true, //  tells Prettier to use prettier-eslint instead of Prettier
+  "prettier.stylelintIntegration": true, // tells Prettier to use prettier-stylelint instead of Prettier
+  "eslint.autoFixOnSave": false, //  we don’t need ESLint to fix our code for us directly, since prettier-eslint will be running eslint --fix for us anyways.
+  "editor.formatOnSave": true // runs Prettier with the above options on every file save, so you never have to manually invoke VSCode’s format command.
+}
