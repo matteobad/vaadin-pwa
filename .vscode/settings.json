@@ -1,7 +1,4 @@
 {
-  "window.zoomLevel": 1,
-  "editor.tabSize": 2,
-
   // Prettier
   "prettier.eslintIntegration": true, //  tells Prettier to use prettier-eslint instead of Prettier
   "prettier.stylelintIntegration": true, // tells Prettier to use prettier-stylelint instead of Prettier
