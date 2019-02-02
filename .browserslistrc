@@ -1,0 +1,10 @@
+# Browsers that we support
+# BROWSERSLIST_ENV or NODE_ENV variables
+
+[production staging]
+defaults
+not ie 11
+not ie_mob 11
+
+[development]
+defaults
