@@ -1,3 +1,5 @@
+const { resolve } = require("path");
+
 const JSLoader = {
   test: /\.js$/,
   exclude: /node_modules/,
@@ -17,7 +19,7 @@ const ESLintLoader = {
   use: {
     loader: "eslint-loader",
     options: {
-      configFile: __dirname + "/.eslintrc"
+      configFile: resolve(__dirname, "../.eslintrc")
     }
   }
 };
@@ -37,7 +39,7 @@ const CSSLoader = {
       loader: "postcss-loader",
       options: {
         config: {
-          path: __dirname + "/postcss.config.js"
+          path: __dirname + "../postcss.config.js"
         }
       }
     }

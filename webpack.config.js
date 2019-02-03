@@ -5,19 +5,18 @@ const webpackMerge = require("webpack-merge");
 
 const loaders = require("./config/webpack/loaders");
 const plugins = require("./config/webpack/plugins");
-const modeConfig = require(`./config/webpack/presets/webpack.${env.mode}.js`);
-const loadPresets = require("./config/webpack/load-presets");
+// const loadPresets = require("./config/webpack/load-presets");
+// const loadMode = require(`./config/webpack/modes/webpack.${env.mode}.js`);
 
-module.exports = ({ mode, presets }) => {
+module.exports = env => {
   return webpackMerge(
     {
-      mode,
       output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[chunkhash:8].js"
       },
       module: {
-        rules: [loaders.JSLoader, loaders.ESLintLoader]
+        rules: [loaders.CSSLoader, loaders.JSLoader, loaders.ESLintLoader]
       },
       plugins: [
         plugins.CleanWebpackPlugin,
@@ -25,8 +24,8 @@ module.exports = ({ mode, presets }) => {
         plugins.HtmlWebpackPlugin,
         plugins.CopyWebpackPlugin
       ]
-    },
-    modeConfig({ mode, presets }),
-    loadPresets({ mode, presets })
+    }
+    // loadPresets({ mode, presets }),
+    // loadMode({ mode, presets })
   );
 };

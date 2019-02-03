@@ -1,3 +1,5 @@
 body {
   /* FIX: No empty block */
+  margin: 0;
+  padding: 0;
 }
